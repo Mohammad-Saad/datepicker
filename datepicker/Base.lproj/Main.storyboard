@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="datepicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuu-nR-ZLj">
+                                <rect key="frame" x="243" y="271" width="115" height="30"/>
+                                <state key="normal" title="What is the day?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnpickdate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mly-IX-B7h"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="c2E-fA-4pV">
+                                <rect key="frame" x="0.0" y="70" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="450011074.17070001">
+                                    <!--2015-04-06 11:04:34 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c2E-fA-4pV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="CbX-s5-Ua1"/>
+                            <constraint firstItem="c2E-fA-4pV" firstAttribute="centerX" secondItem="yuu-nR-ZLj" secondAttribute="centerX" id="ZeV-qu-imY"/>
+                            <constraint firstItem="yuu-nR-ZLj" firstAttribute="top" secondItem="c2E-fA-4pV" secondAttribute="bottom" constant="38" id="amF-te-vJN"/>
+                            <constraint firstItem="c2E-fA-4pV" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="bwC-C1-ldl"/>
+                            <constraint firstAttribute="trailing" secondItem="c2E-fA-4pV" secondAttribute="trailing" id="uQr-DI-Ymd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dayoicker" destination="c2E-fA-4pV" id="tNZ-0T-YjE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
